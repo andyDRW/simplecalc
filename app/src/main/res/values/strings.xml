@@ -2,5 +2,6 @@
     <string name="app_name">Calculator</string>
     <string name="div_zero">can\'t divide by zero</string>
     <string name="clear">CLEAR</string>
+    <string name="cleared">cleared</string>
     <string name="error">error wrong operetion</string>
 </resources>

@@ -8,10 +8,6 @@
     android:focusable="false"
     android:weightSum="1"
     android:orientation="vertical">
-
-
-
-
     <LinearLayout
         android:orientation="vertical"
         android:weightSum="1"
@@ -22,31 +18,21 @@
             android:layout_weight=".135"
             android:layout_height="wrap_content"
             android:id="@+id/edit_calc_string"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:cursorVisible="false"
-            android:layout_alignParentEnd="true" />
+            android:cursorVisible="false" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_clear"
         android:layout_weight=".135"
         android:id="@+id/linearLayout"
-        android:weightSum="1"
-        android:layout_alignRight="@+id/gridLayout"
-        android:layout_alignEnd="@+id/gridLayout">
+        android:weightSum="1">
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".75"
+            android:tag=""
             android:text="@string/clear"
-            android:id="@+id/button_clear"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignBottom="@+id/button_backspace" />
+            android:id="@+id/button_clear" />
 
         <Button
             android:layout_width="0dp"
@@ -54,9 +40,7 @@
             android:layout_weight=".25"
             android:text="&lt;="
             android:id="@+id/button_backspace"
-            android:layout_below="@+id/edit_calc_string"
-            android:layout_alignRight="@+id/edit_calc_string"
-            android:layout_alignEnd="@+id/edit_calc_string" />
+        />
 
 
         </LinearLayout>
@@ -64,30 +48,25 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_clear"
             android:layout_weight=".135"
-            android:id="@+id/linearLayout"
-            android:weightSum="1"
-            android:layout_alignRight="@+id/gridLayout"
-            android:layout_alignEnd="@+id/gridLayout">
+            android:weightSum="1">
 
             <Button
                 android:layout_weight=".5"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:text="("
-                android:id="@+id/button_open_bkt"
-                android:layout_below="@+id/button_clear"
-                android:layout_alignRight="@+id/button_clear"
-                android:layout_alignEnd="@+id/button_clear" />
+                android:tag="("
+                android:id="@+id/button_open_bkt" />
 
             <Button
                 android:layout_weight=".5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text=")"
+                android:tag=")"
                 android:id="@+id/button_close_bkt"
-                android:layout_alignTop="@+id/button_open_bkt"
+
                 />
         </LinearLayout>
 
@@ -96,19 +75,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".135"
-            android:id="@+id/linearLayout"
-            android:weightSum="1"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:weightSum="1">
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="7"
+                android:tag="7"
                 android:id="@+id/button_seven"
-                android:layout_row="0"
-                android:layout_column="0"
                 android:longClickable="false"
                 android:singleLine="false" />
 
@@ -117,27 +92,24 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="8"
-                android:id="@+id/button_eight"
-                android:layout_row="0"
-                android:layout_column="1" />
+                android:tag="8"
+                android:id="@+id/button_eight" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="9"
-                android:id="@+id/button_nine"
-                android:layout_row="0"
-                android:layout_column="2" />
+                android:tag="9"
+                android:id="@+id/button_nine" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="/"
-                android:id="@+id/button_divide"
-                android:layout_row="0"
-                android:layout_column="3" />
+                android:tag="/"
+                android:id="@+id/button_divide" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,142 +117,115 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".135"
-                android:id="@+id/linearLayout"
-                android:weightSum="1"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true">
+                android:weightSum="1">
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="4"
-                android:id="@+id/button_four"
-                android:layout_row="1"
-                android:layout_column="0" />
+                android:tag="4"
+                android:id="@+id/button_four" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="5"
-                android:id="@+id/button_five"
-                android:layout_row="1"
-                android:layout_column="1" />
+                android:tag="5"
+                android:id="@+id/button_five" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="6"
-                android:id="@+id/button_six"
-                android:layout_row="1"
-                android:layout_column="2" />
+                android:tag="6"
+                android:id="@+id/button_six" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="*"
-                android:id="@+id/button_multiply"
-                android:layout_row="1"
-                android:layout_column="3" />
+                android:tag="*"
+                android:id="@+id/button_multiply" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".135"
-            android:id="@+id/linearLayout"
-            android:weightSum="1"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
-
-
+            android:weightSum="1">
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
-                android:id="@+id/button_one"
-                android:layout_row="2"
-                android:layout_column="0" />
+                android:tag="1"
+                android:id="@+id/button_one" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="2"
-                android:id="@+id/button_two"
-                android:layout_row="2"
-                android:layout_column="1" />
+                android:tag="2"
+                android:id="@+id/button_two" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="3"
-                android:id="@+id/button_three"
-                android:layout_row="2"
-                android:layout_column="2" />
+                android:tag="3"
+                android:id="@+id/button_three" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="-"
-                android:id="@+id/button_subtract"
-                android:layout_row="2"
-                android:layout_column="3" />
+                android:tag="-"
+                android:id="@+id/button_subtract" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_clear"
             android:layout_weight=".135"
-            android:id="@+id/linearLayout"
-            android:weightSum="1"
-            android:layout_alignRight="@+id/gridLayout"
-            android:layout_alignEnd="@+id/gridLayout">
+            android:weightSum="1">
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="."
-                android:id="@+id/button_point"
-                android:layout_row="3"
-                android:layout_column="0" />
+                android:tag="."
+                android:id="@+id/button_point" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="0"
-                android:id="@+id/button_zero"
-                android:layout_row="3"
-                android:layout_column="1" />
+                android:tag="0"
+                android:id="@+id/button_zero" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="="
-                android:id="@+id/button_equal"
-                android:layout_row="3"
-                android:layout_column="2" />
+                android:id="@+id/button_equal" />
 
             <Button
                 android:layout_weight=".25"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="+"
-                android:id="@+id/button_addition"
-                android:layout_row="3"
-                android:layout_column="3" />
+                android:tag="+"
+                android:id="@+id/button_addition" />
         </LinearLayout>
 
 

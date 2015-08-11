@@ -19,7 +19,7 @@ public class ReversePolishNotation {
         //mError == true if input string isn't correct
         private boolean mError;
         //creates Reverse Polish Notation object from input string
-        ReversePolishNotation(String input){
+        public ReversePolishNotation(String input){
                 mError =false;
                 mAnswer =0;
                 mInputDefinition = new String(input);
@@ -109,11 +109,11 @@ public class ReversePolishNotation {
 
         }
         //getting last computed result
-        public float getmAnswer(){
+        public float getAnswer(){
                 return mAnswer;
         }
 
-        public boolean ismError(){
+        public boolean isError(){
             return mError;
         }
         //computing and return result
@@ -130,8 +130,8 @@ public class ReversePolishNotation {
                                 stack.push(operand);
                         }
                         catch(NumberFormatException nfe){
-                                secondOperand=(float)stack.pop();
                                 try {
+                                        secondOperand=(float)stack.pop();
                                         firstOperand = (float) stack.pop();
                                         switch (element) {
                                         case "-":
@@ -147,7 +147,7 @@ public class ReversePolishNotation {
                                                 mAnswer = firstOperand / secondOperand;
                                         break;
                                         }
-                                stack.push(mAnswer);
+                                        stack.push(mAnswer);
                                 }
                                 catch (EmptyStackException ex) {
                                         mError =true;
